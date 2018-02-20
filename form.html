@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BarraNavegacion</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<!--Import Google Icon Font-->
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+<!--Import materialize.css-->
+<!-- Compiled and minified CSS -->
+<link rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/css/materialize.min.css">
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css">
+
+	 <!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+<!-- Compiled and minified JavaScript -->
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
+</head>
+<body>
+	<div class="row">
+		<div class="col l12 s12">
+			<div class="card">
+				<div class="card-content">
+					<span class="card-title">Formulario</span>
+					<div class="input-field">
+						<input type="email" name="" placeholder="Escribe tu nombre" required="" class="validate">	
+						<label for="email" data-error="Incorrecto" data-success="Correcto">Nombre</label>	
+					</div>
+					<div class="input-field">
+						<i class="material-icons prefix">send</i>
+						<input type="email" name="" placeholder="Escribe tu nombre" required="" class="validate">	
+						<label for="email" data-error="Incorrecto" data-success="Correcto">Texto</label>	
+					</div>
+					<div class="input-field">
+						<textarea class="materialize-textarea"></textarea>	
+						<label for="textarea">Texto</label>
+					</div>
+					<div>
+						<select>
+							<option disabled selected>Eliga una opcion</option>
+							<option value="">Opcion 1</option>
+							<option value="">Opcion 2</option>
+							<option value="">Opcion 3</option>
+							<option value="">Opcion 4</option>
+						</select>
+						<p>
+							<input type="radio" name="grupo" id="radio1">
+							<label for="radio1">Radio I</label>
+						</p>
+						<p>
+							<input type="radio" name="grupo" id="radio2">
+							<label for="radio2">Radio II</label>
+						</p>
+						<div class="file-field input-field">
+							<div class="btn">
+								<span>File</span>
+								<input type="file">
+							</div>
+							<div class="file-path-wrapper">
+								<input type="text" name="" class="file-path validate" placeholder="Elige un archivo">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script>
+		$('select').material_select();
+	</script>
+</body>
+</html>
