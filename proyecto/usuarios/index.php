@@ -41,6 +41,19 @@
 		</div>
 	</div>
 </div>
+<div class="row">
+	<div class="col s12">
+		<nav class="blue">
+			<div class="nav-wrapper">
+				<div class="input-field">
+					<input type="search" id="idBuscar" autocomplete="off">
+					<label class="label-icon" for="idBuscar"><i class="material-icons">search</i></label>
+					<i class="material-icons">close</i>
+				</div>
+			</div>
+		</nav>
+	</div>
+</div>
 <?php 
 	$smtm = $con -> query("SELECT * FROM usuarios");
 	$counta = mysqli_num_rows($smtm);
@@ -52,14 +65,17 @@
 				<span class="card-tilte">Usuarios (<?php echo $counta; ?>)</span>
 				<table>
 					<thead>
-						<th>Nick</th>
-						<th>Nombre</th>
-						<th>Correo</th>
-						<th>Nivel</th>
-						<th>Foto</th>
-						<th>Bloquedo</th>
-						<th>Foto</th>
-						<th></th>
+						<tr class="cabecera">
+							<th>Nick</th>
+							<th>Nombre</th>
+							<th>Correo</th>
+							<th>Nivel</th>
+							<th>Foto</th>
+							<th>Bloquedo</th>
+							<th>Foto</th>
+							<th>Eliminar</th>
+							<th>Modificar</th>
+						</tr>
 					</thead>
 					<?php 
 						while ($f = $smtm -> fetch_assoc()) { ?>
@@ -80,6 +96,7 @@
 		</div>
 	</div>
 </div>
+
 <?php include '../extend/scripts.php'; ?>
 <script src="../js/validacion.js"></script>
 </body>

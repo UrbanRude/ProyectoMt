@@ -17,6 +17,17 @@
 <script type="text/javascript"
         src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.1/js/materialize.min.js"></script>
 <script>
+  //  BLOQUE PARA HACER UNA BUSQUEDA EN UNA TABLA
+  // ----------------------------------------------------------------------------------------------------------
+  $('#idBuscar').keyup(function(e){
+    var contenido = new RegExp($(this).val(),'i');
+    $('tr').hide();
+    $('tr').filter(function(){
+      return contenido.test($(this).text());
+    }).show();
+    $('.cabecera').attr('style','');
+  });
+  // ----------------------------------------------------------------------------------------------------------
 	$('.button-collpase').sideNav();
 	function may(obj,id){
 		obj = obj.toUpperCase();
